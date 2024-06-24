@@ -24,8 +24,6 @@ public class App
 		  int id = r.nextInt(10000,99999);
 		      
         
-//        int id = 1000;
-        
         Student student = new Student(id,"mahesh","Ahmedabad");
         
         studentDao.insert(student);
