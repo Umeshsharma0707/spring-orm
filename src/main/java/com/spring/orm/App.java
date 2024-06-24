@@ -1,5 +1,7 @@
 package com.spring.orm;
 
+import java.util.Random;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,7 +17,16 @@ public class App
         
         StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
         
-        Student student = new Student(10,"umesh","Ahmedabad");
+        
+		
+		  Random r = new Random();
+		  
+		  int id = r.nextInt(10000,99999);
+		      
+        
+//        int id = 1000;
+        
+        Student student = new Student(id,"mahesh","Ahmedabad");
         
         studentDao.insert(student);
         
