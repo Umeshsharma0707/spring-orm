@@ -6,10 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.spring.orm.dao.StudentDao;
 import com.spring.orm.entities.Student;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
