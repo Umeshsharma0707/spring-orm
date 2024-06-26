@@ -1,6 +1,6 @@
 package springorm.practice.dao;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -42,13 +42,14 @@ public class EmployeeDao {
 	}
 	
 	// delete employee
+	@Transactional
 	public void deleteEmployee(int id) {
 		Employee employee = this.hibernateTemplate.get(Employee.class, id);
 		this.hibernateTemplate.delete(employee);
 	}
 	
 	// update employee
-	
+	@Transactional
 	public void updateEmployee(Employee employee) {
 		this.hibernateTemplate.update(employee);
 	}
