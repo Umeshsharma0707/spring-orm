@@ -1,6 +1,7 @@
 package springorm.practice.dao;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,4 +25,41 @@ public class EmployeeDao {
 		
 		return result;
 	}
+	
+	// get single data(object)
+	
+	public Employee getEmployee(int employeeId) {
+		Employee employee = this.hibernateTemplate.get(Employee.class, employeeId);
+		return employee;
+	}
+	
+	// get all employees object
+	
+	public List<Employee> getAllEmployees(){
+		List<Employee> allEmployees = this.hibernateTemplate.loadAll(Employee.class);
+		return allEmployees;
+		
+	}
+	
+	// delete employee
+	public void deleteEmployee(int id) {
+		Employee employee = this.hibernateTemplate.get(Employee.class, id);
+		this.hibernateTemplate.delete(employee);
+	}
+	
+	// update employee
+	
+	public void updateEmployee(Employee employee) {
+		this.hibernateTemplate.update(employee);
+	}
+	
 }
+
+
+
+
+
+
+
+
+

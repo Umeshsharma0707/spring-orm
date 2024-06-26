@@ -13,10 +13,12 @@ public class Test {
 		
 		EmployeeDao employeeDao = context.getBean("employeeDao", EmployeeDao.class);
 		
-		Employee employee = new Employee(12,"shivam","java developer");
+		Employee employee = new Employee(29,"vijay","java developer");
+		Employee employee1 = new Employee(24,"rakesh","web developer");
+		int insertedEmployees;
+		insertedEmployees = employeeDao.insertEmployee(employee);
+		insertedEmployees = employeeDao.insertEmployee(employee1);
 		
-		int r = employeeDao.insertEmployee(employee);
-		
-		System.out.println("total rows inserted : " + r/10);
+		System.out.println("total employees inserted : " + insertedEmployees/10);
 	}
 }
