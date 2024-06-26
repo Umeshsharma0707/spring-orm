@@ -111,7 +111,7 @@ public class Test {
 						System.out.println();
 					break;
 				case 6:
-					flag = false;
+					flag = false;;
 					System.out.println("ok bye");
 					System.out.println("________________________________________________________");
 					System.out.println();
