@@ -96,7 +96,7 @@ public class Test {
 						employeeDao.updateEmployee(updatedEmployee);
 						System.out.println("Employee updated at employee_id : " + updatedId);
 						System.out.println();
-						System.out.println("________________________________________________________");
+						System.out.println("________________________________________________________");;;
 						System.out.println();
 						break;
 				
